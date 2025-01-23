@@ -2,8 +2,8 @@
 
 namespace App\Services;
 
-use App\Http\Requests\Auth\LoginRequest;
-use App\Http\Requests\Auth\RegisterRequest;
+use App\Http\Requests\Dashboard\Auth\LoginRequest;
+use App\Http\Requests\Dashboard\Auth\RegisterRequest;
 use App\Http\Resources\Auth\AuthResource;
 use App\Models\User;
 use Illuminate\Http\Request;

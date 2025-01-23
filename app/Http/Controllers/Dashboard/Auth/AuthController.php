@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers\Dashboard\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Auth\LoginRequest;
-use App\Http\Requests\Auth\RegisterRequest;
+use App\Http\Requests\Dashboard\Auth\LoginRequest;
+use App\Http\Requests\Dashboard\Auth\RegisterRequest;
 use App\Services\AuthService;
 use Illuminate\Http\Request;
 

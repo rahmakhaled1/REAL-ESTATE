@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\Dashboard\Auth\AuthController;
+use App\Http\Controllers\Dashboard\Post\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,3 +23,16 @@ Route::group(
             Route::post("logout","logout")->middleware(["auth:sanctum"]);
         });
     });
+
+Route::group(
+    ["prefix" => "dashboard/posts", "middleware" => ["auth:sanctum"]],
+    function () {
+        Route::controller(PostController::class)->group(function () {
+            Route::post("fetch-posts", "fetch_posts");
+            Route::post("store", "store");
+            Route::post("update", "update");
+            Route::post("delete", "delete");
+        });
+    }
+);
+
