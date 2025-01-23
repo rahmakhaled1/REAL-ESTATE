@@ -2,13 +2,14 @@
 
 namespace App\Models;
 
+use App\Traits\SearchTrait;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    use HasFactory;
+    use HasFactory, SearchTrait;
 
     protected $fillable = [
         'title',
@@ -24,6 +25,8 @@ class Post extends Model
         'user_id',
         'post_id'
     ];
+
+    protected $searchable = ['rooms', 'kitchens', 'bedrooms', 'bathrooms', 'category', 'price'];
 
     public function images()
     {
