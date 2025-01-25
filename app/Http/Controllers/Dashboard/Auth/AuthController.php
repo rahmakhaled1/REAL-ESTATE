@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Dashboard\Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Dashboard\Auth\LoginRequest;
 use App\Http\Requests\Dashboard\Auth\RegisterRequest;
-use App\Services\AuthService;
+use App\Services\Auth\AuthService;
 use Illuminate\Http\Request;
 
 class AuthController extends Controller

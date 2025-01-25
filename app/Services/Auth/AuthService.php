@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services;
+namespace App\Services\Auth;
 
 use App\Http\Requests\Dashboard\Auth\LoginRequest;
 use App\Http\Requests\Dashboard\Auth\RegisterRequest;

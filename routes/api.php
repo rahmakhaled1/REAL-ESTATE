@@ -15,6 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::group(
+    ["prefix" => "admin"],
+    function (){
+        Route::controller(App\Http\Controllers\Admin\Auth\AuthController::class)->group(function () {
+            Route::post("login","loginAdmin");
+            Route::post("logout","logoutAdmin")->middleware(["auth:admin"]);
+        });
+    });
+Route::group(
     [],
     function (){
         Route::controller(AuthController::class)->group(function () {
@@ -45,3 +53,4 @@ Route::group(
             Route::post("search","search");
         });
     });
+

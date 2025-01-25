@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services;
+namespace App\Services\Post;
 
 use App\Helpers\ImageHelper;
 use App\Http\Requests\Dashboard\Post\PostRequest;
