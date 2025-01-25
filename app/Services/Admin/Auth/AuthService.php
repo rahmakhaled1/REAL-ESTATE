@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Services\Admin;
+namespace App\Services\Admin\Auth;
 
-use App\Http\Requests\Admin\LoginRequest;
+use App\Http\Requests\Admin\Auth\LoginRequest;
 use App\Models\Admin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;

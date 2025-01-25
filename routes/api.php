@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+/* Start Admin */
 Route::group(
     ["prefix" => "admin"],
     function (){
@@ -30,8 +31,15 @@ Route::group(
             Route::post("update", "update");
             Route::post("delete", "delete");
         });
+        Route::controller(App\Http\Controllers\Admin\User\UserController::class)->group(function () {
+            Route::post("fetch-users", "fetch_users");
+            Route::post("delete-user", "delete_user");
+        });
     }
 );
+/* End Admin */
+
+/* Start Dashboard User */
 Route::group(
     [],
     function (){
@@ -53,7 +61,9 @@ Route::group(
         });
     }
 );
+/* End Dashboard User */
 
+/* Start User */
 Route::group(
     ["prefix" => "real-estate/posts"],
     function (){
@@ -63,4 +73,4 @@ Route::group(
             Route::post("search","search");
         });
     });
-
+/* End User */
