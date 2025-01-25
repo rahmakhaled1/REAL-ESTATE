@@ -23,16 +23,6 @@ Route::group(
         });
     });
 Route::group(
-    ["prefix" => "admin", "middleware" => ["auth:admin"]],
-    function () {
-        Route::controller(App\Http\Controllers\Admin\Post\PostController::class)->group(function () {
-            Route::post("fetch-posts", "fetch_posts");
-            Route::post("update", "update");
-            Route::post("delete", "delete");
-        });
-    }
-);
-Route::group(
     [],
     function (){
         Route::controller(AuthController::class)->group(function () {
